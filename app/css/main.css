@@ -317,7 +317,7 @@ a:not(.btn):hover {
 }
 
 .section_top {
-  background: url("/img/bg_hero.jpeg") center no-repeat;
+  background: url("../img/bg_hero.jpeg") center no-repeat;
   background-size: cover;
   position: relative;
   padding: 72px 0;
@@ -461,7 +461,7 @@ a:not(.btn):hover {
 }
 
 .section_cta {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/bg_cta.jpeg") center no-repeat, #FFFFFF;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg_cta.jpeg") center no-repeat, #FFFFFF;
   background-size: cover;
 }
 .section_cta h2 {
