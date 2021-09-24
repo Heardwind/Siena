@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
       <meta charset="UTF-8">
@@ -16,43 +16,7 @@
 
     <main>
 
-        <header class="header">
-            <div class="container">
-
-                <button class="toggle_nav"><span></span></button>
-
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.svg" alt="logo"></a>
-                </div>
-
-                <div class="nav_wrap">
-                    <ul class="nav">
-                        <li class="nav_item">
-                            <a href="#">Services</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#">Insights</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#">Company</a>
-                        </li>
-                        <li class="nav_item">
-                            <a href="#">Contact Us</a>
-                        </li>
-                    </ul>
-
-                    <div class="socials">
-                        <a href="https://www.linkedin.com/" class="social_item" target="_blank">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 1.14624C0 0.513244 0.526 0.000244141 1.175 0.000244141H14.825C15.474 0.000244141 16 0.513244 16 1.14624V14.8542C16 15.4872 15.474 16.0002 14.825 16.0002H1.175C0.526 16.0002 0 15.4872 0 14.8542V1.14624ZM4.943 13.3942V6.16924H2.542V13.3942H4.943ZM3.743 5.18224C4.58 5.18224 5.101 4.62824 5.101 3.93424C5.086 3.22524 4.581 2.68624 3.759 2.68624C2.937 2.68624 2.4 3.22624 2.4 3.93424C2.4 4.62824 2.921 5.18224 3.727 5.18224H3.743ZM8.651 13.3942V9.35924C8.651 9.14324 8.667 8.92724 8.731 8.77324C8.904 8.34224 9.299 7.89524 9.963 7.89524C10.832 7.89524 11.179 8.55724 11.179 9.52924V13.3942H13.58V9.25024C13.58 7.03024 12.396 5.99824 10.816 5.99824C9.542 5.99824 8.971 6.69824 8.651 7.19124V7.21624H8.635C8.64031 7.2079 8.64564 7.19956 8.651 7.19124V6.16924H6.251C6.281 6.84724 6.251 13.3942 6.251 13.3942H8.651Z" fill="black" fill-opacity="0.7"/>
-                            </svg>
-                            LINKEDIN
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </header>
+        @include('partials/header.html')
 
         <section class="section_top">
             <div class="container">
@@ -214,75 +178,10 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="top_bar">
-                <div class="container">
-                    <div class="col-1-5">
-                        <div class="logo">
-                            <img src="img/logo.svg" alt="logo">
-                        </div>
-                    </div>
-                    <div class="col-1-5">
-                        <h5>Navigation</h5>
-                        <ul class="nav">
-                            <li class="nav_item">
-                                <a href="#">Services</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="#">Insights</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="#">Company</a>
-                            </li>
-                            <li class="nav_item">
-                                <a href="#">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-1-5">
-                        <h5>Locations</h5>
-                        <ul class="nav">
-                            <li class="nav_item">
-                                <a href="#">LONDON, UK</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-1-5">
-                        <h5>Locations</h5>
-                        <ul class="nav">
-                            <li class="nav_item">
-                                <a href="https://www.linkedin.com/" target="_blank">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 1.14624C0 0.513244 0.526 0.000244141 1.175 0.000244141H14.825C15.474 0.000244141 16 0.513244 16 1.14624V14.8542C16 15.4872 15.474 16.0002 14.825 16.0002H1.175C0.526 16.0002 0 15.4872 0 14.8542V1.14624ZM4.943 13.3942V6.16924H2.542V13.3942H4.943ZM3.743 5.18224C4.58 5.18224 5.101 4.62824 5.101 3.93424C5.086 3.22524 4.581 2.68624 3.759 2.68624C2.937 2.68624 2.4 3.22624 2.4 3.93424C2.4 4.62824 2.921 5.18224 3.727 5.18224H3.743ZM8.651 13.3942V9.35924C8.651 9.14324 8.667 8.92724 8.731 8.77324C8.904 8.34224 9.299 7.89524 9.963 7.89524C10.832 7.89524 11.179 8.55724 11.179 9.52924V13.3942H13.58V9.25024C13.58 7.03024 12.396 5.99824 10.816 5.99824C9.542 5.99824 8.971 6.69824 8.651 7.19124V7.21624H8.635C8.64031 7.2079 8.64564 7.19956 8.651 7.19124V6.16924H6.251C6.281 6.84724 6.251 13.3942 6.251 13.3942H8.651Z" fill="black" fill-opacity="0.7"/>
-                                    </svg>
-                                    LINKEDIN</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-1-5">
-                        <h3>For more information</h3>
-                        <a href="#" class="animated_arrow">
-                            <span class="arrow_left"></span>
-                            <span class="arrow_text">Contact Us</span>
-                            <span class="arrow_right"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom_bar">
-                <div class="container">
-                    <p class="copyright">© Siena Partnership 2021. Privacy Statement</p>
-                </div>
-            </div>
-        </footer>
-
-        <div class="overlay"></div>
-
+        @include('partials/footer.html')
 
     </main>
 
-
-    <!-- @include('partials/header') пример инклуда -->
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
 </body>
