@@ -19,6 +19,13 @@
 }
 @font-face {
   font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
   src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-display: swap;
@@ -277,6 +284,7 @@ a:not(.btn):hover {
   border: none;
   height: 14px;
   width: 21px;
+  z-index: 2;
 }
 .header .toggle_nav:before, .header .toggle_nav:after, .header .toggle_nav span {
   display: block;
@@ -576,6 +584,9 @@ a:not(.btn):hover {
   margin-top: 56px;
 }
 
+.footer {
+  border-top: 1px solid #EDF0F2;
+}
 .footer .top_bar .container {
   display: flex;
   gap: 32px;
@@ -709,6 +720,9 @@ a:not(.btn):hover {
 }
 .section_service_page .bg svg path {
   fill: #FA003C;
+}
+.section_service_page h1 {
+  color: #191041;
 }
 .section_service_page .case {
   margin-top: 125px;
@@ -858,6 +872,184 @@ a:not(.btn):hover {
   background-color: #FA003C;
 }
 
+.section_about_page {
+  padding: 119px 0;
+  position: relative;
+}
+.section_about_page .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+.section_about_page .bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.section_about_page .bg:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.65);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.section_about_page .bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.section_about_page h1 {
+  margin-bottom: 40px;
+}
+.section_about_page img {
+  width: 100%;
+  height: auto;
+}
+
+.section_team {
+  padding: 96px 0;
+}
+.section_team h2 {
+  margin-bottom: 56px;
+  color: #191041;
+  text-align: center;
+}
+.section_team .team {
+  display: grid;
+  gap: 56px 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.section_team .team_item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.section_team .team_img {
+  border-radius: 50%;
+  border: 4px solid #FA003C;
+  overflow: hidden;
+  min-width: 150px;
+  width: 150px;
+  height: 150px;
+}
+.section_team .team_img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.section_team .team h4 {
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+.section_team .team .postition {
+  color: #FA003C;
+  font-weight: 300;
+}
+
+.section_contacts_page {
+  padding: 80px 0;
+  background-color: #F5F7FA;
+}
+.section_contacts_page .container {
+  display: flex;
+}
+.section_contacts_page h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 90px;
+}
+.section_contacts_page .contact ul.contact_tabs {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 43px;
+  border-bottom: 1px solid #E9EBED;
+  display: flex;
+}
+.section_contacts_page .contact ul.contact_tabs li {
+  padding: 20px;
+  min-width: 224px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ACADAF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+}
+.section_contacts_page .contact ul.contact_tabs li.active {
+  color: #FA003C;
+  border-color: #FA003C;
+}
+.section_contacts_page .contact_content h6 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+.section_contacts_page .contact_content p {
+  font-size: 14px;
+}
+.section_contacts_page .contact_content p span {
+  color: #FA003C;
+}
+.section_contacts_page form {
+  margin-top: 40px;
+}
+.section_contacts_page form input, .section_contacts_page form textarea {
+  font-size: 18px;
+  color: #4A4A4B;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #E1E3E6;
+  padding: 16px 0;
+  width: 100%;
+}
+.section_contacts_page form .input_wrap {
+  margin-bottom: 48px;
+}
+.section_contacts_page form .checkbox_wrap {
+  margin-bottom: 24px;
+}
+.section_contacts_page form .input_submit_wrap {
+  margin-top: 40px;
+}
+.section_contacts_page form .btn {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+.section_contacts_page form .checkbox_wrap p, .section_contacts_page form .checkbox_wrap ul {
+  font-size: 16px;
+}
+.section_contacts_page hr {
+  margin: 64px 0 40px;
+  border: 1px solid #E1E3E5;
+}
+.section_contacts_page .located {
+  align-items: center;
+}
+.section_contacts_page .located h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+.section_contacts_page .located h3 span {
+  color: #FA003C;
+}
+.section_contacts_page .located img {
+  margin-top: -15vw;
+}
+
+@media (max-width: 1024px) {
+  .section_team .team {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .header {
     height: 64px;
@@ -891,14 +1083,14 @@ a:not(.btn):hover {
   }
   .header .nav_wrap {
     position: absolute;
-    top: 64px;
+    top: 0;
     left: 0;
     bottom: 0;
     max-width: 180px;
     width: 100%;
-    height: calc(100vh - 64px);
+    height: 100vh;
     background-color: #fff;
-    padding: 32px 16px;
+    padding: 98px 16px 32px;
     flex-direction: column;
     align-items: start;
     transform: translateX(-100%);
@@ -1078,6 +1270,27 @@ a:not(.btn):hover {
   .section_other_services .services {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .section_about_page {
+    padding: 56px 0;
+  }
+  .section_about_page h1 {
+    margin-bottom: 16px;
+  }
+  .section_about_page .container > div {
+    width: 100%;
+  }
+
+  .section_team {
+    padding: 56px 0;
+  }
+  .section_team h2 {
+    margin-bottom: 40px;
+  }
+  .section_team .team {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 42px;
+  }
 }
 @media (max-width: 480px) {
   .section_clients .clients_item img {
@@ -1087,6 +1300,12 @@ a:not(.btn):hover {
   .section_top .btn, .section_tagline .btn, .section_partner_candidate .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .section_team .team_img {
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
   }
 }
 /*# sourceMappingURL=main.css.map */

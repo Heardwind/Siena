@@ -18,6 +18,111 @@
 
     @include('partials/header.html')
 
+    <div class="section_contacts_page">
+        <div class="container">
+            <div class="col-2-3">
+                <h1>Please get in touch and one of our management team will come back to you as soon as they can:</h1>
+
+                <div class="contact">
+                    <ul class="contact_tabs tab_navs">
+                        <li id="candidate" class="active">I’m Candidate</li>
+                        <li id="company">We’re Company</li>
+                    </ul>
+
+                    <div class="contact_content tab_content">
+                        <div>
+                            <h6>Please enter your personal information below</h6>
+                            <p>Fields marked with (<span>*</span>) are required</p>
+                            <form action="#">
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="First Name" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="Last Name" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="Address" />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="Postcode" />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="tel" placeholder="Mobile Phone" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="email" placeholder="E-mail Address" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <label for="file">Please attach your resume</label>
+                                    <input type="file" id="file" name="file">
+                                </div>
+                                <h6>Declaration of Consent</h6>
+                                <div class="checkbox_wrap">
+                                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                                    <label for="checkbox1">
+                                        <p>I am interested in being contacted and considered for opportunities with the The Siena Partnership, and when appropriate have my information submitted for potential work Accordingly, I agree as follows:</p>
+                                        <ul>
+                                            <li>I hereby authorize The Siena Partnership to process data about me that I provide or that is collected from publicly accessible sources (such as websites) or third parties ("Personal Data") and consent to the following processing activities for the purpose of providing me with employment opportunities:</li>
+                                            <li>Collect and process personal data such as name, business and private contact data, résumé, qualifications, skills, financial compensation where permitted by local law, testimonials, certifications, records of interviews and assessments, personal interests, background checks and all other information you choose to share with us.</li>
+                                            <li>Communicate with me via e-mail or telephone regarding opportunities</li>
+                                        </ul>
+                                    </label>
+                                </div>
+                                <div class="checkbox_wrap">
+                                    <input type="checkbox" id="checkbox2" name="checkbox2">
+                                    <label for="checkbox2">I have read the information on data processing and give my consent.</label>
+                                </div>
+                                <div class="input_submit_wrap">
+                                    <button class="btn btn_default submit" type="submit">Send</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div style="display: none;">
+                            <h6>Please enter your personal information below</h6>
+                            <p>Fields marked with (*) are required</p>
+                            <form action="#">
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="First Name" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="Last Name" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="text" placeholder="Company" />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="tel" placeholder="Mobile Phone" required />
+                                </div>
+                                <div class="input_wrap">
+                                    <input type="email" placeholder="E-mail Address" required />
+                                </div>
+                                <p>If you’re able to share any details about the hires you are looking for, please do – we might just have a solution close by:</p>
+                                <hr />
+                                <div class="input_submit_wrap">
+                                    <button class="btn btn_default submit" type="submit">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="col-1-3"></div>
+        </div>
+        <div class="container located">
+            <div class="col-1-2">
+                <h3>We are located in <br />
+                    <span>London, UK</span></h3>
+            </div>
+            <div class="col-1-2">
+                <img src="./img/map.svg" alt="bg">
+            </div>
+        </div>
+    </div>
+
     @include('partials/footer.html')
 
 </main>

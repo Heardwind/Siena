@@ -11,8 +11,8 @@ function init() {
     let toggleNavButton = document.querySelector('.toggle_nav');
     let overlay = document.querySelector('.overlay');
     let typingElem = document.querySelectorAll('.typing');
-    let tabCards = document.querySelectorAll('.services_card');
-    let tabContent = document.querySelectorAll('.services_content > div');
+    let tabNavs = document.querySelectorAll('.tab_navs > *');
+    let tabContent = document.querySelectorAll('.tab_content > *');
     let moreButtons = document.querySelectorAll('.more');
 
 
@@ -48,19 +48,19 @@ function init() {
         });
     }
 
-    if(tabCards.length&&tabContent.length) {
-        let cards = Array.from(tabCards);
+    if(tabNavs.length&&tabContent.length) {
+        let navs = Array.from(tabNavs);
         let tabs = Array.from(tabContent);
         let activeIndex = 0;
         const tabHandler = function () {
-            const newIndex = cards.indexOf(this);
-            cards[activeIndex].classList.remove('active');
+            const newIndex = navs.indexOf(this);
+            navs[activeIndex].classList.remove('active');
             tabs[activeIndex].style.display = 'none';
-            cards[newIndex].classList.add('active');
+            navs[newIndex].classList.add('active');
             tabs[newIndex].style.display = 'block';
             activeIndex = newIndex;
         }
-        cards.map((elem,index) => {
+        navs.map((elem,index) => {
             elem.addEventListener('click', tabHandler);
         });
     }

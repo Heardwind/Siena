@@ -869,8 +869,8 @@ function init() {
   var toggleNavButton = document.querySelector('.toggle_nav');
   var overlay = document.querySelector('.overlay');
   var typingElem = document.querySelectorAll('.typing');
-  var tabCards = document.querySelectorAll('.services_card');
-  var tabContent = document.querySelectorAll('.services_content > div');
+  var tabNavs = document.querySelectorAll('.tab_navs > *');
+  var tabContent = document.querySelectorAll('.tab_content > *');
   var moreButtons = document.querySelectorAll('.more');
 
   if (toggleNavButton) {
@@ -906,21 +906,21 @@ function init() {
     });
   }
 
-  if (tabCards.length && tabContent.length) {
-    var cards = Array.from(tabCards);
+  if (tabNavs.length && tabContent.length) {
+    var navs = Array.from(tabNavs);
     var tabs = Array.from(tabContent);
     var activeIndex = 0;
 
     var tabHandler = function tabHandler() {
-      var newIndex = cards.indexOf(this);
-      cards[activeIndex].classList.remove('active');
+      var newIndex = navs.indexOf(this);
+      navs[activeIndex].classList.remove('active');
       tabs[activeIndex].style.display = 'none';
-      cards[newIndex].classList.add('active');
+      navs[newIndex].classList.add('active');
       tabs[newIndex].style.display = 'block';
       activeIndex = newIndex;
     };
 
-    cards.map(function (elem, index) {
+    navs.map(function (elem, index) {
       elem.addEventListener('click', tabHandler);
     });
   }
