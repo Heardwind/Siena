@@ -910,6 +910,7 @@ a:not(.btn):hover {
         cursor: pointer;
         transition: all .2s ease;
         border-bottom: 3px solid transparent;
+        margin-bottom: -1px;
         &.active {
           color: $red_color;
           border-color: $red_color;
