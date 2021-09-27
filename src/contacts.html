@@ -52,14 +52,15 @@
                                 <div class="input_wrap">
                                     <input type="email" placeholder="E-mail Address" required />
                                 </div>
-                                <div class="input_wrap">
-                                    <label for="file">Please attach your resume</label>
+                                <div class="input_wrap input_wrap_file">
+                                    <img src="./img/file.svg" alt="icon"><label for="file">Please attach your resume</label>
                                     <input type="file" id="file" name="file">
                                 </div>
                                 <h6>Declaration of Consent</h6>
                                 <div class="checkbox_wrap">
-                                    <input type="checkbox" id="checkbox1" name="checkbox1">
                                     <label for="checkbox1">
+                                        <input type="checkbox" id="checkbox1" name="checkbox1">
+                                        <span></span>
                                         <p>I am interested in being contacted and considered for opportunities with the The Siena Partnership, and when appropriate have my information submitted for potential work Accordingly, I agree as follows:</p>
                                         <ul>
                                             <li>I hereby authorize The Siena Partnership to process data about me that I provide or that is collected from publicly accessible sources (such as websites) or third parties ("Personal Data") and consent to the following processing activities for the purpose of providing me with employment opportunities:</li>
@@ -69,8 +70,10 @@
                                     </label>
                                 </div>
                                 <div class="checkbox_wrap">
-                                    <input type="checkbox" id="checkbox2" name="checkbox2">
-                                    <label for="checkbox2">I have read the information on data processing and give my consent.</label>
+                                    <label for="checkbox2">
+                                        <input type="checkbox" id="checkbox2" name="checkbox2" required>
+                                        <span></span>
+                                        I have read the information on data processing and give my consent.</label>
                                 </div>
                                 <div class="input_submit_wrap">
                                     <button class="btn btn_default submit" type="submit">Send</button>
@@ -80,7 +83,7 @@
 
                         <div style="display: none;">
                             <h6>Please enter your personal information below</h6>
-                            <p>Fields marked with (*) are required</p>
+                            <p>Fields marked with (<span>*</span>) are required</p>
                             <form action="#">
                                 <div class="input_wrap">
                                     <input type="text" placeholder="First Name" required />
@@ -97,8 +100,9 @@
                                 <div class="input_wrap">
                                     <input type="email" placeholder="E-mail Address" required />
                                 </div>
-                                <p>If you’re able to share any details about the hires you are looking for, please do – we might just have a solution close by:</p>
-                                <hr />
+                                <div class="input_wrap">
+                                    <textarea name="message" placeholder="If you’re able to share any details about the hires you are looking for, please do – we might just have a solution close by:"></textarea>
+                                </div>
                                 <div class="input_submit_wrap">
                                     <button class="btn btn_default submit" type="submit">Send</button>
                                 </div>
