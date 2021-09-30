@@ -13,7 +13,7 @@ function init() {
     let typingElem = document.querySelectorAll('.typing');
     let tabNavs = document.querySelectorAll('.tab_navs > *');
     let tabContent = document.querySelectorAll('.tab_content > *');
-    let moreButtons = document.querySelectorAll('.more');
+    // let moreButtons = document.querySelectorAll('.more');
     let modalTriggers = document.querySelectorAll('[data-modal]');
     let closeModalButton = document.querySelectorAll('.close_modal');
     let fileInputs = document.querySelectorAll('input[type="file"]');
@@ -141,17 +141,17 @@ function init() {
         }
     }
 
-    if(moreButtons.length) {
-        const showMoreHandler = function (e) {
-            e.preventDefault();
-            const prevEl = this.previousElementSibling;
-            prevEl.style.webkitLineClamp = 13;
-            this.remove();
-        }
-        Array.from(moreButtons).map(elem => {
-            elem.addEventListener('click',showMoreHandler);
-        })
-    }
+    // if(moreButtons.length) {
+    //     const showMoreHandler = function (e) {
+    //         e.preventDefault();
+    //         const prevEl = this.previousElementSibling;
+    //         prevEl.style.webkitLineClamp = 13;
+    //         this.remove();
+    //     }
+    //     Array.from(moreButtons).map(elem => {
+    //         elem.addEventListener('click',showMoreHandler);
+    //     })
+    // }
 
 
 }

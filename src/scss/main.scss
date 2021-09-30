@@ -62,6 +62,7 @@ a:not(.btn):hover {
 
   .container {
     @include flex-all-sb;
+    height: 100%;
   }
 
   .logo {
@@ -127,6 +128,32 @@ a:not(.btn):hover {
 
     li {
       padding-left: 0;
+      position: relative;
+
+      ul {
+        list-style: none;
+        padding: 20px;
+        border-radius: 2px;
+        background-color: #fff;
+        position: absolute;
+        min-width: 200px;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-10px);
+        z-index: 1;
+        transition: all .2s ease;
+        opacity: 0;
+        visibility: hidden;
+        li:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+
+      &:hover ul {
+        transform: translate(-50%,0);
+        opacity: 1;
+        visibility: visible;
+      }
     }
 
     a {
@@ -604,6 +631,10 @@ a:not(.btn):hover {
     color: $dark_blue_color;
   }
 
+  .container > p {
+    max-width: 704px;
+  }
+
   .case {
     margin-top: 125px;
     display: grid;
@@ -893,17 +924,14 @@ a:not(.btn):hover {
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 64px;
-
-    &:last-l {
-      color: $red_color;
-    }
+    line-height: 1.5;
   }
 
   .contact {
     ul.contact_tabs {
       list-style: none;
       padding: 0;
-      margin-bottom: 26 0 43px;
+      margin: 26px 0 40px;
       border-bottom: 1px solid #E9EBED;
       @include flex;
 
@@ -939,6 +967,11 @@ a:not(.btn):hover {
 
   form {
     margin-top: 40px;
+
+    label {
+      color: #757575;
+      font-size: 18px;
+    }
 
     input, textarea {
       font-size: 18px;
@@ -1156,6 +1189,20 @@ body.modal_open {
   }
 }
 
+
+// fixed header
+main {
+  padding-top: 88px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 @include tablet {
   .section_team .team {
     grid-template-columns: repeat(2, 1fr);
@@ -1168,6 +1215,10 @@ body.modal_open {
 
 
 @include mobile {
+
+  main {
+    padding-top: 64px;
+  }
 
   .header {
     height: 64px;
@@ -1231,6 +1282,20 @@ body.modal_open {
         flex-direction: column;
         align-items: start;
         padding: 0;
+
+        li ul {
+          position: relative;
+          top: 0;
+          left: 0;
+          transform: none;
+          min-width: auto;
+          padding: 20px 0 0 10px;
+          opacity: 1;
+          visibility: visible;
+          li {
+            margin-bottom: 12px;
+          }
+        }
       }
     }
   }
@@ -1409,7 +1474,7 @@ body.modal_open {
     }
 
     .top_bar {
-      padding-bottom: 0;
+      padding: 40px 0 0;
       h3 {
         font-size: 2.25rem;
       }
@@ -1418,6 +1483,10 @@ body.modal_open {
 
   .section_service_page {
     padding: 56px 0;
+
+    h1 {
+      margin: 0 0 1rem;
+    }
 
     .bg {
       width: 100vw;
@@ -1490,13 +1559,14 @@ body.modal_open {
         font-size: 16px;
         padding: 13px;
         max-width: 100%;
+        min-width: auto;
       }
 
       h6 {
         font-size: 16px;
       }
 
-      input, textarea {
+      input, textarea, label {
         font-size: 16px;
       }
 

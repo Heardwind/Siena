@@ -180,7 +180,7 @@ const toProd = (done) => {
 
 exports.default = series(clean, htmlInclude, scripts, styles, resources, images, fonts, svgSprites, watchFiles);
 
-exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, fonts, svgSprites, htmlMinify);
+exports.build = series(toProd, clean, htmlInclude, scripts, styles, resources, images, fonts, svgSprites);
 
 exports.cache = series(cache, rewrite);
 
