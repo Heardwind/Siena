@@ -9,6 +9,7 @@
 function init() {
 
     let toggleNavButton = document.querySelector('.toggle_nav');
+    let toggleSubmenuButtons = document.querySelectorAll('.menu-item-has-children > a');
     let overlay = document.querySelector('.overlay');
     let typingElem = document.querySelectorAll('.typing');
     let tabNavs = document.querySelectorAll('.tab_navs > *');
@@ -129,7 +130,7 @@ function init() {
         if(window.location.href.includes('#')) {
             const tabId = window.location.href.split('#')[1];
             const matchId = function (elem, i) {
-                if (elem.id == tabId) {
+                if (elem.dataset.id == tabId) {
                     return i;
                 }
                 return false;
@@ -139,6 +140,19 @@ function init() {
                 el.click();
             }
         }
+    }
+
+
+    if(toggleSubmenuButtons.length) {
+        const toggleSubmenuHandler = function (e) {
+            e.preventDefault();
+            if (window.innerWidth < 768)
+                this.parentElement.classList.toggle('active');
+        }
+        Array.from(toggleSubmenuButtons).map(elem => {
+            elem.addEventListener('click',toggleSubmenuHandler);
+        })
+
     }
 
     // if(moreButtons.length) {
